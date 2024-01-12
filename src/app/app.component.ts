@@ -1,27 +1,19 @@
 import { Component } from '@angular/core';
-import { CommonModule, getLocaleEraNames } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HighlightDirective } from './highlight.directive';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HighlightDirective],
+  imports: [CommonModule, RouterOutlet, TodoListComponent],
   template: `
-  <h1> Découverte des directives d'attributs </h1>
-    <p highlight bg-color="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod aut itaque facilis neque cupiditate sunt sapiente, 
-    quae nostrum iure! Enim dignissimos repellat temporibus, repellendus atque maxime quos labore. Dignissimos!</p>
-
-    <p highlight>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod aut itaque facilis neque cupiditate sunt sapiente, 
-    quae nostrum iure! Enim dignissimos repellat temporibus, repellendus atque maxime quos labore. Dignissimos!</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod aut itaque facilis neque cupiditate sunt sapiente, 
-    quae nostrum iure! Enim dignissimos repellat temporibus, repellendus atque maxime quos labore. Dignissimos!</p>
-
+  <div class="container">
+    <todo-list/>
+  </div>
   `,
-  styleUrl: './app.component.css'
+  styles: [],
 })
 export class AppComponent {
-  title = 'sandbox';
-}
 
+}
